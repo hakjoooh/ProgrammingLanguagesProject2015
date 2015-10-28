@@ -209,7 +209,7 @@ struct
   let rec eval : memory -> env -> exp -> (value * memory) = 
     fun mem env e -> match e with
     | NUM i -> (Num i, mem)
-    | _ -> raise (Error("not implemented")) (* implement it! *)
+    | _ -> raise (Error("not implemented")) (* TODO: implement it! *)
 
   let run (mem, env, pgm) = 
     let (v,_) = eval mem env pgm in
